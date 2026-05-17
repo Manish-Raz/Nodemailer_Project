@@ -41,7 +41,30 @@ A simple Node.js project that uses **Nodemailer** to send emails using a Gmail a
         path:'./images/img1.png'
     })
 ```
+---
 
+# How to send img along with html content
+### In index.html 
+#### Add the following 
+```html
+<!--email clients can't access local folders so we convert to cid embeded one --->
+<div class="image-container">
+  <img class="img" src="cid:welcomeimg" alt="related img">
+</div>
+```
+
+### In index.js
+#### Add the following lines:
+```javascript
+mail.setAttachments({
+    filename: 'img1.png',
+    path: './images/img1.png',
+    cid: 'welcomeimg'
+})
+
+```
+
+###
 # Installation
 
 ## 1. Clone the Repository
