@@ -87,6 +87,14 @@ class Mail{
         this.mailOptions.html = html;
     }
 
+     //syntax for sending attachments
+    //syntax for sending attachments
+ setAttachments(attachments){
+    this.mailOptions.attachments = attachments;
+ }
+
+
+
     /**
      * send the email using teh configured options
      * this function uses the nodemailer transporter to send the email.

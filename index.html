@@ -33,7 +33,15 @@
       margin: 0;
       font-size: 32px;
     }
+.image-container{
+  display: flex;
+  justify-content: center;
+}
 
+.img{
+  width: 500px;
+  height: auto;
+}
     .content {
       padding: 30px;
       line-height: 1.7;
@@ -102,7 +110,10 @@
       <p>
         We encourage you to participate, ask questions, share ideas, and make the most out of this journey with us.
       </p>
-
+<div class="image-container">
+  <img class="img" src="cid:welcomeimg" alt="related img">
+</div>
+      <!--email clients can't access local folder so we use cid img attachments-->
       <center>
         <a href="#" class="btn">Get Started</a>
       </center>

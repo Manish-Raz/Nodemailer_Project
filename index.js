@@ -39,7 +39,7 @@ app.post("/mail", async (req,res)=>{
     let{ receiver_id, subject, text, name } = req.body;
     
     //reading file index.html 
-    let data = fs.readFileSync(path.join(__dirname,'index.html'),'utf8');
+    let data = fs.readFileSync(path.join(__dirname,'spotify.html'),'utf8');
     data= data.replace('[user]',name);
 
 
@@ -48,6 +48,47 @@ app.post("/mail", async (req,res)=>{
     mail.setSubject(subject);
     mail.setText(text);
     mail.setHTML(data);
+    //email clients can't access local folder so we use cid img attachments
+  mail.setAttachments([
+  {
+    filename: 'spotifyy.png',
+    path: path.join(__dirname,'images','spotifyy.png'),
+    cid: 'topimg'
+  },
+  {
+    filename: 'img1.png',
+    path: path.join(__dirname,'images','img1.png'),
+    cid: 'img1'
+  },
+  {
+    filename: 'img2.png',
+    path: path.join(__dirname,'images','img2.png'),
+    cid: 'img2'
+  },
+  {
+    filename: 'img3.png',
+    path: path.join(__dirname,'images','img3.png'),
+    cid: 'img3'
+  },
+  {
+    filename: 'img1.png',
+    path: path.join(__dirname,'images','img1.png'),
+    cid: 'img4'
+  },
+  {
+    filename: 'img2.png',
+    path: path.join(__dirname,'images','img2.png'),
+    cid: 'img5'
+  },
+  {
+    filename: 'img3.png',
+    path: path.join(__dirname,'images','img3.png'),
+    cid: 'img6'
+  }
+]);
+
+
+
     mail.send();
     res.send("Email sent !");
 })
