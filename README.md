@@ -21,6 +21,27 @@ A simple Node.js project that uses **Nodemailer** to send emails using a Gmail a
 
 ---
 
+# How to send attachments with mail
+### put this in mail.js as new method 
+```javascript
+
+     //syntax for sending attachments
+     setAttachments(attachment){
+        let attachments = this.mailOptions.attachments || []; 
+        //if mailoptions has attachments option then keep it in the varaible otherwise give empty array
+        attachments.push(attachment);
+        this.mailOptions.attachments = attachments;
+     }
+```
+
+### In index.js -add following code
+```javascript
+ mail.setAttachments({
+        filename:'img1.png',
+        path:'./images/img1.png'
+    })
+```
+
 # Installation
 
 ## 1. Clone the Repository
