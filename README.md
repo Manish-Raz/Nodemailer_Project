@@ -2,6 +2,39 @@
 
 A simple Node.js project that uses **Nodemailer** to send emails using a Gmail account and App Password authentication.
 
+
+## Nodemailer
+![Logo](https://i0.wp.com/community.nodemailer.com/wp-content/uploads/2015/10/n2-2.png?fit=422%2C360&ssl=1)
+
+A npm package which is used to send mail from node js server.
+
+
+## Use case of Nodemailer
+- For User Registration 
+- For Password Reset
+- Notifications
+- Feedback Requests
+- Customer Support
+- Event Invitation
+
+## Alternative of Nodemailer 
+We have some other tools which can be used instead of Nodemailer
+- SendGrid
+- Amazon SES
+- SMTP.js
+- Mailgun
+- Email JS
+
+### Reason to use Nodemailer
+The main reason to chose nodemailer is that it is easy to implement with node js. We don't have to install any other packages for it. It works on every platform. We can send HTML content and files. Nodemailer supports unicode.  
+
+### Install 
+```bash
+npm i nodemailer
+```
+
+Explore the official website :https://nodemailer.com/
+
 ---
 
 ## Features
