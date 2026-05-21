@@ -54,6 +54,15 @@ Explore the official website :https://nodemailer.com/
 
 ---
 
+## Main points 
+Sending an email with Nodemailer involves three simple steps:
+
+- Create a transporter: Configure your SMTP server or another supported transport method.
+- Compose your message: Define the sender, recipient(s), subject, and content.
+- Send the email: Call transporter.sendMail() with your message options.
+
+---
+
 # How to send attachments with mail
 ### put this in mail.js as new method 
 ```javascript
